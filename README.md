@@ -26,6 +26,7 @@ mysql_password
 mysql_port: 3306
 mysql_root_password
 mysql_state: started
+mysql_version: 5.7
 ```
 
 ## Example playbook
