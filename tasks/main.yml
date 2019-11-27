@@ -25,11 +25,11 @@
     name: "{{ mysql_network }}"
     state: present
 
-- name: Run mysql 5.7 server
+- name: Run mysql server
   docker_container:
     env:
       MYSQL_ROOT_PASSWORD: "{{ mysql_root_password }}"
-    image: mysql:5.7
+    image: "mysql:{{ mysql_version }}"
     labels:
       traefik.enable: "false"
     name: "{{ mysql_container_name }}"
